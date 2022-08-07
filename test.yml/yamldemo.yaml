@@ -1,0 +1,28 @@
+{
+  "bar": "this is not a normal string it\nspans more than\none line\nsee?\n",
+  "items": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "names": [
+    "one",
+    "two",
+    "three",
+    "four"
+  ],
+  "object": [
+    {
+      "id": 1,
+      "nae": "Franc"
+    },
+    {
+      "id": 2,
+      "nae": "Joh"
+    }
+  ],
+  "longText": "ddbewdbenc nd verjnvjek vc",
+  "Text": "ncskcndskjcndcn  chjdbvhje kfjenvkjfn\n"
+}
