@@ -4,6 +4,12 @@ on: push
 
 jobs:
   node-setup: 
+    strategy:
+      matrix: 
+        node-version: [6,8,10]
+      #max-parallel: 0 #we can limit the parallel occurence of jobs(default=0)
+      #fail-fast: false # 6,8,10 will run independently 
+      #fail-fast: true # every thing will stop if one of 6,8,10 fails. 
     runs-on: ubuntu-latest
     steps:
       - name: node-setup
