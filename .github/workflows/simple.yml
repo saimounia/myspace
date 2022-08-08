@@ -6,9 +6,13 @@ jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
     steps:
-      - name: eccho a string 
-        run: eccho "HEllo world"
+      - name: echo a string 
+        run: echo "HEllo world"
       - name: multiline script
         run: |
           node -v
           npm -v
+      - name: python command
+        run : |
+          print(2+3)
+        shell: python
