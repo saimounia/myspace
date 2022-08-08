@@ -2,7 +2,7 @@ name: shell commands
 
 on: 
   repository_dispatch: 
-    
+    types: [build]
   #schedule:
     #- cron: "0/5 * * * *" #for every 5 minutes
   #push:
@@ -13,6 +13,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: payload
+        run: echo "${{github.event}}"
       - name: List
         run: |
           pwd
