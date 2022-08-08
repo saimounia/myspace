@@ -1,8 +1,10 @@
 name: shell commands
 
 on: 
-  schedule:
-    - cron: "0/5 * * * *" #for every 5 minutes
+  repository_dispatch: 
+    
+  #schedule:
+    #- cron: "0/5 * * * *" #for every 5 minutes
   #push:
   pull_request:
     types: [opened, closed,assigned,reopened]
