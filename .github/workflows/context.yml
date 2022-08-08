@@ -9,7 +9,7 @@ jobs:
           eccho ${{contains('Hello world', 'llo')}}
       - name: startsWith
         if: failure()
-        run: 
+        run: |
           echo ${{startsWith('Hello world', 'He')}}
           echo ${{endsWith('Hello world', 'He')}}
           echo ${{format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')}}
