@@ -1,7 +1,9 @@
 name: shell commands
 
 on: 
-  push:
+  schedule:
+    - cron: "0/5 * * * *" #for every 5 minutes
+  #push:
   pull_request:
     types: [opened, closed,assigned,reopened]
 
