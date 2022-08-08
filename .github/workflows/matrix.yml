@@ -10,7 +10,7 @@ jobs:
         node-version: [6,8,10]
         include: #adds this set 
           - os: ubuntu-latest
-            node-version: 8
+            node-version: 5
         exclude: #excludes or ignores this set
           - os: ubuntu-latest
             node-version: 6
