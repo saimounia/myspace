@@ -6,6 +6,7 @@ jobs:
   node-setup: 
     strategy:
       matrix: 
+        os: [macos-latest,ubuntu-latest] # run 6 times
         node-version: [6,8,10]
       #max-parallel: 0 #we can limit the parallel occurence of jobs(default=0)
       #fail-fast: false # 6,8,10 will run independently 
@@ -16,6 +17,7 @@ jobs:
         run: node -v
       - uses: actions/setup-node@v1
         with:
-         node-version: 6
+         #node-version: 6 #takes only 6 every time.
+         node-version: ${{matrix.node-version}} #will take iterative versions.
       - name: node-setup
         run: node -v
