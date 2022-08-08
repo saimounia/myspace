@@ -13,5 +13,5 @@ jobs:
           who-to-greet: Mounika
           
       - name: output
-        run: echo "{{ steps.greet.outputs.time}}"
+        run: echo "${{ steps.greet.outputs.time}}"
 
