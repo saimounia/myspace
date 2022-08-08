@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: node-setup
         run: node -v
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v1
         with:
-         node-version: 16
+         node-version: 6
       - name: node-setup
         run: node -v
