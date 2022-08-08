@@ -3,10 +3,14 @@ on: push
 jobs:
   functions: 
     runs-on: ubuntu-latest
+    if: github.event_name=="push"
     steps:
-      - name: string methods
-        run: |
-          echo ${{contains('Hello world', 'llo')}}
+      - name: contains
+        run: 
+          eccho ${{contains('Hello world', 'llo')}}
+      - name: startsWith
+        if: failure()
+        run: 
           echo ${{startsWith('Hello world', 'He')}}
           echo ${{endsWith('Hello world', 'He')}}
           echo ${{format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')}}
