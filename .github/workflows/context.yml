@@ -3,7 +3,6 @@ on: push
 jobs:
   functions: 
     runs-on: ubuntu-latest
-    if: github.event_name=="push"
     steps:
       - name: contains
         run: 
