@@ -4,11 +4,13 @@ on: [push]
 
 jobs:
   run-shell-command: 
-    
     runs-on: ubuntu-latest
+    
+    #timeout-minutes: 360 #github kills the runner if the step runs beyond this time.
     steps:
       - name: echo a string 
         run: echo "HEllo world"
+        #continue-on-error: true # to run all the next steps after fail steps
       - name: multiline script
         run: |
           node -v

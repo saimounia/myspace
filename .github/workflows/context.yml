@@ -6,9 +6,11 @@ jobs:
     steps:
       - name: contains
         run: 
-          eccho ${{contains('Hello world', 'llo')}}
+          #eccho ${{contains('Hello world', 'llo')}} #failure 
+          echo ${{contains('Hello world', 'llo')}}
       - name: startsWith
-        if: failure()
+        #if: failure() #even if previous is failed , this one will be run.
+        if: always() #even if previous is failed or passed, this one will be run.
         run: |
           echo ${{startsWith('Hello world', 'He')}}
           echo ${{endsWith('Hello world', 'He')}}
