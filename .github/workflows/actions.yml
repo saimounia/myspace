@@ -1,13 +1,23 @@
 name: shell commands
 
 on: 
-  repository_dispatch: 
-    types: [build]
+  push:
+    branches:
+      - master
+      - 'format/*'
+      - "!format/**"
+    tags:
+      - v1.*
+    paths: 
+      - '**.js'
+      
+  #repository_dispatch: 
+  #  types: [build]
   #schedule:
     #- cron: "0/5 * * * *" #for every 5 minutes
   #push:
-  pull_request:
-    types: [opened, closed,assigned,reopened]
+ # pull_request:
+  #  types: [opened, closed,assigned,reopened]
 
 jobs:
   run-github-actions:
